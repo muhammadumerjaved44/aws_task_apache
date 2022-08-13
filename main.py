@@ -1,6 +1,6 @@
 import uvicorn
 from fastapi import FastAPI, FastAPI, Body, Request, File, UploadFile, HTTPException, status
-from tasks_api import create_task, get_tasks, get_task, update_task, delete_task
+from .tasks_api import create_task, get_tasks, get_task, update_task, delete_task
 
 
 app = FastAPI()
