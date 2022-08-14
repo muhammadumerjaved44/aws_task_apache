@@ -2,8 +2,25 @@ import uvicorn
 from fastapi import FastAPI, FastAPI, Body, Request, File, UploadFile, HTTPException, status
 from tasks_api import create_task, get_tasks, get_task, update_task, delete_task
 
+description = """
+Taks Challange API helps you do awesome stuff. 🚀
+"""
 
-app = FastAPI()
+app = FastAPI(
+    title="Task Challage App",
+    description=description,
+    version="0.0.1",
+    terms_of_service="http://example.com/terms/",
+    contact={
+        "name": "Deadpoolio the Amazing",
+        "url": "http://x-force.example.com/contact/",
+        "email": "dp@x-force.example.com",
+    },
+    license_info={
+        "name": "Apache 2.0",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0.html",
+    },
+)
 
 
 @app.get("/")
